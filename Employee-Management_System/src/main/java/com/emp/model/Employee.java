@@ -21,7 +21,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class Employee {
 	@Id
-	@SequenceGenerator(name="gen1",sequenceName ="emp_seq",initialValue =1000,allocationSize =1)
+	@SequenceGenerator(name="gen1",sequenceName ="emp_seq",initialValue =7000,allocationSize =1)
 	@GeneratedValue(generator ="gen1",strategy = GenerationType.SEQUENCE)
 	private Integer empno;
 	
@@ -34,6 +34,7 @@ public class Employee {
 	private String job;
 	
 	@NonNull
+	@Column(columnDefinition = "NUMBER(7,2)")
 	private Double sal;
 	
 	@NonNull

@@ -22,5 +22,12 @@ public class EmployeeMgmtServiceImpl implements IEmployeeMgmtService {
 		return empRepo.findAll(Sort.by("ename"));
 	}
 
+	@Override
+	public String registerEmployee(Employee emp) {
+		//use service
+		int idVal=empRepo.save(emp).getEmpno();
+		return "Employee is Register with the id Value :"+idVal;
+	}
+
 
 }

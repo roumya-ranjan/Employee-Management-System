@@ -170,6 +170,8 @@ tr:last-child td {
 	<div class="add">
 		<a href="register">Add Employee</a>
 	</div>
+	<br>
+	<h1 style="color:green;text-align:center">${resultMsg}</h1> 
 
 	<div class="home">
 		<a href="./">Home</a>
