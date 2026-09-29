@@ -87,7 +87,7 @@
   <main>
     <h1>Keep every employee record in one place.</h1>
     <p class="lead">View your team, add new people, update details, and remove records that are no longer needed.</p>
-    <a class="report" href="${pageContext.request.contextPath}/report">Show report</a>
+    <a class="report" href="${pageContext.request.contextPath}/show_report">Show report</a>
   </main>
 
   <footer>Employee Management Project</footer>

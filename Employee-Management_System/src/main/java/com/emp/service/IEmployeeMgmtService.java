@@ -5,5 +5,6 @@ import java.util.List;
 import com.emp.model.Employee;
 
 public interface IEmployeeMgmtService {
-	public List<Employee> getAllEmployees();
+	public List<Employee> showAllEmployees();
+	
 }
