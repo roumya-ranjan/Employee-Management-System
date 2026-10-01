@@ -29,5 +29,25 @@ public class EmployeeMgmtServiceImpl implements IEmployeeMgmtService {
 		return "Employee is Register with the id Value :"+idVal;
 	}
 
+	@Override
+	public Employee getEmployeeByNo(int eno) {
+		Employee emp=empRepo.findById(eno).orElseThrow(()->new IllegalArgumentException("Invalid id"));
+		return emp;
+	}
+
+	@Override
+	public String updateEmployee(Employee emp) {
+		
+		return "Employee is Updated with having id Value "+empRepo.save(emp).getEmpno();
+	}
+
+	@Override
+	public String deleteEmployeeById(int eno) {
+		empRepo.deleteById(eno);
+		return eno+" id Employee is Deleted";
+	}
+
+
+
 
 }

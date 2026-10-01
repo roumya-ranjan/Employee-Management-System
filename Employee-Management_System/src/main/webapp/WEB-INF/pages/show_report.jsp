@@ -155,7 +155,7 @@ tr:last-child td {
 								<td>${emp.deptno}</td>
 								<td><a class="edit" href="edit?no=${emp.empno}">Edit</a></td>
 								<td><a class="delete" href="delete?no=${emp.empno}"
-									onclick="return confirm('Delete this employee?');">Delete</a></td>
+									onclick="return confirm('Do you want to delete this employee?');">Delete</a></td>
 							</tr>
 						</c:forEach>
 					</tbody>
@@ -166,12 +166,17 @@ tr:last-child td {
 			<h1 class="no-data">No Data</h1>
 		</c:otherwise>
 	</c:choose>
+			<br>
+	<h1 style="color:green;text-align:center">${editMsg}</h1>
+				<br>
+	<h1 style="color:green;text-align:center">${deleteMsg}</h1>
 
 	<div class="add">
 		<a href="register">Add Employee</a>
 	</div>
 	<br>
 	<h1 style="color:green;text-align:center">${resultMsg}</h1> 
+
 
 	<div class="home">
 		<a href="./">Home</a>
